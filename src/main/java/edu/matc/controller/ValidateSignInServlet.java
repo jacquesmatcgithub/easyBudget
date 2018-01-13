@@ -7,10 +7,10 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 @WebServlet (
-        name = "SignInServlet",
-        urlPatterns = "/signIn"
+        name = "ValidateSignInServlet",
+        urlPatterns = "/validateSignIn"
 )
-public class SignInServlet extends HttpServlet {
+public class ValidateSignInServlet extends HttpServlet {
     /**
      *  Handles HTTP GET requests.
      *
@@ -24,8 +24,7 @@ public class SignInServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        System.out.println("inside SignInServlet");
-        String url = "/jsp/sign-in.jsp";
+        String url = "/jsp/signed-in.jsp";
 
         RequestDispatcher  dispatcher =
                 getServletContext().getRequestDispatcher(url);

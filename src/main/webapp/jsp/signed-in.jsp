@@ -12,7 +12,7 @@
 <div id="wrap">
     <c:import url="header.jsp" />
 
-    <c:import url="menu-signin.jsp" />
+    <c:import url="menu-logged-in.jsp" />
 
     <c:import url="../content/content-home.jsp" />
 

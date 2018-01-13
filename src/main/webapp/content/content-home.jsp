@@ -2,5 +2,5 @@
 
 <div id="content">
     <img src="images/budget.jpg" width="800" class="post-img" alt="Bild" />
-    <p>the simple to use home easyBudget application</p>
+    <p>the simple to use home budget tracker</p>
 </div>

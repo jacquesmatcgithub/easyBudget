@@ -1,0 +1,6 @@
+target/
+*~
+lib/*.war
+lib/*.ear
+
+.DS_Store

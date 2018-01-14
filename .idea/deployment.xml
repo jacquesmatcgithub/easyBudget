@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="TomEE">
+    <serverData>
+      <paths name="TomEE">
+        <serverdata>
+          <mappings>
+            <mapping deploy="easyBdget" local="$PROJECT_DIR$/target/easyBudget" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

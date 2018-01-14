@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cb2c83e4-9c66-43bc-9a34-c58ce4b5af8c" name="TomEE" url="http://localhost:8080">
+        <fileTransfer port="0" mountedRoot="$USER_HOME$/tomEE+/webapps" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

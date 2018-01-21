@@ -2,12 +2,11 @@
 
 <!DOCTYPE html>
 
-<c:set var = "pageTitle" value="Advanced Java Home" scope="request" />
+<c:set var="pageTitle" value="Test Title: signed-in.jsp" scope="request" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <c:import url="head-tag.jsp" />
-
 <body>
 <div id="wrap">
     <c:import url="header.jsp" />

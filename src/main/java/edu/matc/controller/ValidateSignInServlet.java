@@ -1,7 +1,9 @@
 package edu.matc.controller;
 
-import java.io.*;
+import edu.matc.persistence.*;
+import edu.matc.entity.*;
 
+import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -24,11 +26,38 @@ public class ValidateSignInServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url = "/jsp/signed-in.jsp";
+        String url;
 
-        RequestDispatcher  dispatcher =
-                getServletContext().getRequestDispatcher(url);
+        int userLevel = getUserData(request, response);
+
+        if (userLevel == 0) {
+            url = "/jsp/sign-in.jsp";
+            request.setAttribute("signInMessage", "Invalid Sign In");
+        } else if (userLevel == 1) {
+            url = "/jsp/signed-in-admin.jsp";
+            request.setAttribute("signInMessage", "Hello Admin");
+        } else {
+            url = "/jsp/signed-in.jsp";
+        }
+
+        RequestDispatcher  dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
+    }
+
+    private int getUserData(HttpServletRequest request, HttpServletResponse response) {
+        String userName = request.getParameter("userName").trim();
+        String userPassword = request.getParameter("password").trim();
+
+        UserData userData = new UserData();
+
+        User userBean = userData.getUser(userName, userPassword);
+
+        if (userBean.getActive()) {
+            return userBean.getLevel();
+        } else {
+            return 0;
+        }
+
     }
 
 }

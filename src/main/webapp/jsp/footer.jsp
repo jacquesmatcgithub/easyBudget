@@ -1,5 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <div id="footer">
     <div style="float: right;">
         <a href="#" title="Contact Us"><img src="images/contact.gif" alt="Contact" /></a>

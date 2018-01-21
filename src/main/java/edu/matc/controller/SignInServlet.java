@@ -24,12 +24,13 @@ public class SignInServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        System.out.println("inside SignInServlet");
         String url = "/jsp/sign-in.jsp";
 
         RequestDispatcher  dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
+
+
 
 }

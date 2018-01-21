@@ -2,12 +2,11 @@
 
 <!DOCTYPE html>
 
-<c:set var="pageTitle" value="easyBudget" scope="request" />
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<c:import url="jsp/head-tag.jsp" />
+<c:set var="pageTitle" value="Test Title: index.jsp" scope="request" />
 
+<c:import url="jsp/head-tag.jsp" />
 <body>
 <div id="wrap">
   <c:import url="jsp/header.jsp" />

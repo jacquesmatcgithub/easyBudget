@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<c:set var="pageTitle" value="Test Title: sign-in.jsp" scope="request" />
+<c:set var = "pageTitle" value="Test Title: signed-in-admin.jsp" scope="request" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -11,7 +11,7 @@
 <div id="wrap">
     <c:import url="header.jsp" />
 
-    <c:import url="menu-signin.jsp" />
+    <c:import url="menu-admin.jsp" />
 
     <c:import url="../content/content-home.jsp" />
 

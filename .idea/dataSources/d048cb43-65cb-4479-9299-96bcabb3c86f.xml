@@ -12,78 +12,106 @@
     <schema id="6" parent="1" name="sample"/>
     <schema id="7" parent="1" name="student"/>
     <schema id="8" parent="1" name="sys"/>
-    <table id="9" parent="2" name="user"/>
-    <table id="10" parent="2" name="userlevel"/>
-    <column id="11" parent="9" name="user_id">
+    <table id="9" parent="2" name="item_type">
+      <Comment>Defines the behaviour of a budget item</Comment>
+    </table>
+    <table id="10" parent="2" name="user"/>
+    <table id="11" parent="2" name="userlevel"/>
+    <column id="12" parent="9" name="user_id">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="9" name="type">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="9" name="behaviour">
+      <Position>3</Position>
+      <DataType>varchar(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="9" name="description">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="16" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="10" name="user_id">
       <Position>1</Position>
       <Comment>This is the user id the user uses to log into the system.</Comment>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="12" parent="9" name="password">
+    <column id="18" parent="10" name="password">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="13" parent="9" name="first_name">
+    <column id="19" parent="10" name="first_name">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="14" parent="9" name="last_name">
+    <column id="20" parent="10" name="last_name">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="9" name="level">
+    <column id="21" parent="10" name="level">
       <Position>5</Position>
       <DataType>tinyint(2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="9" name="active">
+    <column id="22" parent="10" name="active">
       <Position>6</Position>
       <DataType>tinyint(4)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="17" parent="9" name="user_id_UNIQUE">
+    <index id="23" parent="10" name="user_id_UNIQUE">
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="18" parent="9" name="PRIMARY">
+    <key id="24" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="19" parent="9" name="user_id_UNIQUE">
+    <key id="25" parent="10" name="user_id_UNIQUE">
       <ColNames>user_id</ColNames>
       <UnderlyingIndexName>user_id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="20" parent="10" name="level">
+    <column id="26" parent="11" name="level">
       <Position>1</Position>
       <DataType>tinyint(2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="10" name="description">
+    <column id="27" parent="11" name="description">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="10" name="create_new_user">
+    <column id="28" parent="11" name="create_new_user">
       <Position>3</Position>
       <DataType>tinyint(4)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="10" name="create_new_budget">
+    <column id="29" parent="11" name="create_new_budget">
       <Position>4</Position>
       <DataType>tinyint(4)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="10" name="view_all_budgets">
+    <column id="30" parent="11" name="view_all_budgets">
       <Position>5</Position>
       <DataType>tinyint(4)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="25" parent="10" name="PRIMARY">
+    <key id="31" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>level</ColNames>
       <Primary>1</Primary>

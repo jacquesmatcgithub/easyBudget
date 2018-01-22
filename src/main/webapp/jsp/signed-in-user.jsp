@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<c:set var="pageTitle" value="Test Title: signed-in.jsp" scope="request" />
+<c:set var="pageTitle" value="Hello User" scope="request" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -13,7 +13,7 @@
 
     <c:import url="menu-logged-in.jsp" />
 
-    <c:import url="../content/content-home.jsp" />
+    <c:import url="../content/content-user.jsp" />
 
     <c:import url="footer.jsp" />
 </div>

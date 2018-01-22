@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<c:set var="pageTitle" value="Test Title: index.jsp" scope="request" />
+<c:set var="pageTitle" value="Welcome" scope="request" />
 
 <c:import url="jsp/head-tag.jsp" />
 <body>

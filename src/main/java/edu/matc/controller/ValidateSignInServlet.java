@@ -37,7 +37,7 @@ public class ValidateSignInServlet extends HttpServlet {
             url = "/jsp/signed-in-admin.jsp";
             request.setAttribute("signInMessage", "Hello Admin");
         } else {
-            url = "/jsp/signed-in.jsp";
+            url = "/jsp/signed-in-user.jsp";
         }
 
         RequestDispatcher  dispatcher = getServletContext().getRequestDispatcher(url);
